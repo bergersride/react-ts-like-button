@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './style.css';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-import HeartButton from "./Button";
+import { Button, HeartButton } from "./Button";
 
 interface AppProps { }
 interface AppState {
@@ -23,6 +24,8 @@ class App extends Component<AppProps, AppState> {
       <h1>{this.state.name}</h1>
       <HeartButton />
       <HeartButton />
+      <Button />
+      <Button icon={faHeart} text={"9+"} />
       </div>
     );
   }
